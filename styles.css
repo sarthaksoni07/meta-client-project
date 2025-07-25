@@ -1,0 +1,19 @@
+/* *{
+margin: 0px;
+padding: 0px;
+} */
+
+.logo{
+display:block;
+margin: auto;   
+    height: 420px;
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+}
+nav li{
+    display: inline-block;
+    margin: auto;
+    padding: 20px;
+}
