@@ -98,34 +98,49 @@ a:hover {
 
   flex-wrap: wrap;
   text-align: center;
-}
-.promotion {
+}.promotion {
   position: relative;
   margin: 20px;
 }
+
 .promotion-p {
   position: absolute;
-  padding: 5px 10px 10px 40px;
+  /* Use percentages for padding to scale with the parent .promotion */
+  padding: 2% 4% 4% 8%; /* Adjust these percentages as needed */
   color: azure;
   text-align: left;
+  /* Add top and left positioning to control placement relative to the image */
+  top: 50%; /* Example: Position vertically in the middle */
+  left: 50%; /* Example: Position horizontally in the middle */
+  transform: translate(-50%, -50%); /* Center the text block */
+  width: 90%; /* Give the text a width relative to its parent */
+  box-sizing: border-box; /* Include padding in the width calculation */
 }
+
 .promotion-p h1 {
-  font-size: xx-large;
+  /* Use vw for font-size to scale with the viewport width */
+  font-size: 5vw; /* Adjust as needed, e.g., 5% of viewport width */
   background-color: #113636;
   display: inline-block;
-  padding: 8px;
+  padding: 1vw; /* Scale padding with viewport width */
   border-radius: 10px;
   margin-bottom: 0%;
 }
+
 .promotion-p p {
-  font-style: bold;
+  /* Use vw for font-size and percentages for padding */
+  font-size: 2.5vw; /* Adjust as needed */
   color: rgb(8, 87, 87);
   background-color: rgb(158, 238, 238);
-  padding: 5px;
+  padding: 1vw; /* Scale padding with viewport width */
   border-radius: 6px;
+  font-weight: bold; /* Corrected 'font-style: bold;' to 'font-weight: bold;' */
 }
+
 .promotion-img {
   max-width: 100%;
+  height: auto; /* Ensures image scales proportionally */
+  display: block; /* Removes extra space below image */
   margin: auto;
   padding: 5px;
   border-radius: 20px;
@@ -133,7 +148,6 @@ a:hover {
   transition: all 0.4s ease-in-out;
   object-fit: cover;
 }
-
 /* seperate 3 columns for content and images */
 .products {
   display: flex;
